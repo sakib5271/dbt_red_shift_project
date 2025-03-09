@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: fct_sales_performance
+    description: "Aggregated sales and marketing performance metrics"
+    columns:
+      - name: transaction_year
+        tests:
+          - not_null
+      - name: transaction_month
+        tests:
+          - not_null
+      - name: category
+        tests:
+          - not_null
+      - name: unique_customers
+        tests:
+          - not_null
+      - name: total_revenue
+        tests:
+          - not_null
+      - name: total_cost
+        tests:
+          - not_null
+      - name: total_marketing_cost
+        tests:
+          - not_null
+      - name: revenue_to_cost_ratio
+        tests:
+          - not_null

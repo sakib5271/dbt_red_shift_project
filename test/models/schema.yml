@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: raw
+    database: your_database  # Optional if default is used
+    schema: public  # Redshift schema where the table exists
+    tables:
+      - name: product_catalog  # The table in Redshift
+      - name: marketing_events
+      - name: sales_transactions

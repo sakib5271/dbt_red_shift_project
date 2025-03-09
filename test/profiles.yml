@@ -1,0 +1,13 @@
+test:
+  target: dev
+  outputs:
+    dev:
+      type: redshift
+      host: your-redshift-cluster.us-east-1.redshift.amazonaws.com  # Replace with your Redshift cluster endpoint
+      port: 5439  # Default Redshift port
+      dbname: your_database  # Replace with your database name
+      schema: analytics  # Replace with your schema
+      user: your_username  # Replace with your Redshift username
+      password: your_password  # Replace with your Redshift password
+      threads: 4  # Adjust based on performance needs
+      sslmode: require  # Ensures secure connection
