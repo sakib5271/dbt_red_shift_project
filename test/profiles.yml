@@ -11,3 +11,14 @@ test:
       password: your_password  # Replace with your Redshift password
       threads: 4  # Adjust based on performance needs
       sslmode: require  # Ensures secure connection
+
+   prod:
+      type: redshift
+      host: your-redshift-cluster.us-east-1.redshift.amazonaws.com
+      port: 5439
+      dbname: your_database
+      schema: analytics_prod  # Production schema
+      user: "{{ env_var('DBT_REDSHIFT_USER') }}"
+      password: "{{ env_var('DBT_REDSHIFT_PASSWORD') }}"
+      threads: 8
+      sslmode: require
